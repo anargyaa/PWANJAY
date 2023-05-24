@@ -6,6 +6,7 @@
     font-family: 'Ubuntu Mono', monospace;
     list-style: none;
     letter-spacing: 1px;
+    color: black;
 }
 
 :root{
@@ -56,7 +57,8 @@ body{
 }
 
 .form-login .submit{
-    margin-left: 65px;
+    margin-right: 2px;
+    float: right;
     width: 81px;
     padding: 12px;
     background-color: var(--biru);
@@ -65,15 +67,6 @@ body{
     box-shadow: 4px 3px 2px rgba(0, 0, 0, 0.65);
 }
 
-.submit-e{
-    margin: 5px;
-    width: 95%;
-    padding: 4px;
-    background-color: var(--biru);
-    border: 1px solid black;
-    border-radius: 4px;
-    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.65);
-}
 
 .submit:hover{
     box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.65);   
@@ -108,21 +101,32 @@ body{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.65);
 }
 
-.container-nav a{
-    color: black;
-}
-
 .container-isi{
     flex: 3;
 }
 
 /*INDEX END*/
 
+.submit-uni{
+    margin: 20px;
+    width: 91%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 20px;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.65);
+}
+
+.submit-uni:hover{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.65);
+
+}
+
 /*PRODUK*/
 
 .h3-produk{
     width: 100px;
-    margin-left: 51px;
+    margin-left: 50px;
     margin-top: 60px ;
     padding: 6px;
     text-align: center;
@@ -133,8 +137,19 @@ body{
     box-shadow: 6px 5px 2px rgba(0, 0, 0, 0.65);    
 }
 
+.submit-e{
+    margin: 5px;
+    width: 95%;
+    padding: 4px;
+    background-color: var(--biru);
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.65);
+}
+
 .container-produk{
     margin: auto;
+    margin-bottom: 50px;
     width: 90%;
     min-height: 80vh;
     background-color: whitesmoke;
@@ -164,3 +179,52 @@ body{
 }
 
 /*PRODUK END*/
+
+/*CATAT*/
+
+.container-catat{
+    margin: auto;
+    width: 90%;
+    min-height: 65vh;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 0px 10px 10px 10px;
+    overflow: hidden;
+    box-shadow: 7px 5px 2px rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.form-catat{
+    margin: auto;
+    padding: 20px;
+}
+
+.form-catat h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-catat .input-text{
+    background-color: whitesmoke;
+    margin: 16px;
+    width: 500px;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    border-bottom: 1px solid black;
+}
+
+.form-catat .submit-uni{
+/*    margin: 20px;*/
+    width: 30%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 6px;
+    float: right;
+    font-size: 20px;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.65);
+}
+
+/*CATAT END*/

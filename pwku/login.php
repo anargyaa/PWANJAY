@@ -22,7 +22,6 @@
             <br>
             <input type="password" name=" password" class="input-text"/>
             <br>
-            <a href="lupa-password.php">Lupa Password ?</a>
             <input type="submit" name="submit" class="submit">
         </form>
     </div>

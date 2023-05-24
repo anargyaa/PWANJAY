@@ -27,16 +27,16 @@ if (!isset($_SESSION['username'])) {
     <div class="container-nav">
         <ul class="nav">
 			<li>
-				<a href="index.php">Home</a>
+				<a href="index.php">Produk</a>
+			</li>      
+			<li>
+				<a href="index.php?halaman=tambah">Tambahkan</a>
 			</li>
 			<li>
-				<a href="index.php?halaman=produk">Produk</a>
+				<a href="index.php?halaman=keluar">Keluarkan</a>
 			</li>      
 			<li>
-				<a href="index.php?halaman=catat">Catat</a>
-			</li>      
-			<li>
-				<a href="index.php?halaman=rincian">Rincian</a>
+				<a href="index.php?halaman=laporan">Laporan</a>
 			</li>      
 			<li>
 				<a href="index.php?halaman=profile">Profile</a>
@@ -53,14 +53,17 @@ if (!isset($_SESSION['username'])) {
 			<div id="page-inner">
 				<?php
 					if(isset($_GET["halaman"])){
-						if($_GET["halaman"] == "produk"){
-							include 'produk.php';
+						if($_GET["halaman"] == "edit"){
+							include 'edit.php';
 						}
-						elseif($_GET["halaman"] == "catat"){
-							include 'catat.php';
+						elseif($_GET["halaman"] == "tambah"){
+							include 'tambah.php';
 						}
-						elseif($_GET["halaman"] == "rincian"){
-							include 'rincian.php';
+						elseif($_GET["halaman"] == "keluar"){
+							include 'keluar.php';
+						}
+						elseif($_GET["halaman"] == "laporan"){
+							include 'laporan.php';
 						}
 						elseif($_GET["halaman"] == "profile"){
 							include 'profile.php';
@@ -68,9 +71,12 @@ if (!isset($_SESSION['username'])) {
 						elseif($_GET["halaman"] == "logout"){
 							include 'controller/logout.php';
 						}
+						elseif($_GET["halaman"] == "hapus"){
+							include 'controller/hapus-proc.php';
+						}
 					}
 					else{
-						include 'home.php';
+						include 'produk.php';
 					}
 				?>                        
 			</div>
