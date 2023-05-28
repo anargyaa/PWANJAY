@@ -1,0 +1,13 @@
+==========================opsi1
+admin bisa control semuanya 
+bisa tambah edit hapus barang
+user bisa liat barang2nya
+di file index user
+biar bisa cetak laporan waktu
+====================================opsi2
+start->user->menunjukan surat permintaan barang
+->karyawan->cek surat->	jika barang/stok ada()
+			jika barang/stok kosong(menolak permintaan dan kembali ke user);
+user->memberi kartu identitas->karyawan->mencatat barang keluar(detail barang,namaUser,noTelp)
+->karyawan->membuat laporan->end
+->admin/pemilik->melihat laporan->end
