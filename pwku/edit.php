@@ -10,7 +10,7 @@ while($tiap = $ambil->fetch_assoc()){
 }
 
 ?>
-<h3 class="h3-produk">UBAH</h3>
+<h3 class="h3">UBAH</h3>
 <div class="container-catat">
 	<form action="controller/edit-proc.php" method="POST" class="form-catat">
             <h2>Masukan Barang</h2>

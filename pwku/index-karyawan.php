@@ -24,10 +24,11 @@ if (!isset($jabatan)) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="style1.css"> 
     <title>Gudang</title>
 </head>
 <body>
+	<div class="container-index">
 <!-- /.  NAV TOP  -->
     <div class="container-nav">
         <ul class="nav">
@@ -63,5 +64,6 @@ if (!isset($jabatan)) {
 			</div>
     </div>
     <!-- akhir konten -->
+</div>
 </body>
 </html>

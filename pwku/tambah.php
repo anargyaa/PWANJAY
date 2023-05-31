@@ -7,7 +7,7 @@ while($tiap = $query->fetch_assoc()){
 
 ?>
 
-<h3 class="h3-produk">CATAT</h3>
+<h3 class="h3">CATAT</h3>
 <div class="container-catat">
 	<form action="controller/add-proc.php" method="POST" class="form-catat">
             <h2>Masukan Barang</h2>

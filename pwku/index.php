@@ -24,11 +24,12 @@ if (!isset($jabatan)) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="style1.css"> 
     <title>Gudang</title>
 </head>
 <body>
 <!-- /.  NAV TOP  -->
+<div class="container-index">
     <div class="container-nav">
         <ul class="nav">
 			<li>
@@ -38,7 +39,7 @@ if (!isset($jabatan)) {
 				<a href="index.php?halaman=tambah">Tambahkan</a>
 			</li>
 			<li>
-				<a href="index.php?halaman=keluar">Keluarkan</a>
+				<a href="index.php?halaman=merk">Merk</a>
 			</li>      
 			<li>
 				<a href="index.php?halaman=laporan">Laporan</a>
@@ -64,8 +65,8 @@ if (!isset($jabatan)) {
 						elseif($_GET["halaman"] == "tambah"){
 							include 'tambah.php';
 						}
-						elseif($_GET["halaman"] == "keluar"){
-							include 'keluar.php';
+						elseif($_GET["halaman"] == "merk"){
+							include 'merk.php';
 						}
 						elseif($_GET["halaman"] == "laporan"){
 							include 'laporan.php';
@@ -86,6 +87,7 @@ if (!isset($jabatan)) {
 				?>                        
 			</div>
     </div>
+</div>
     <!-- akhir konten -->
 </body>
 </html>
