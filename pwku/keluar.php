@@ -1,31 +1,34 @@
-<?php
-$datamerk = [];
-$query = $conn->query("SELECT * FROM merk");
-while($tiap = $query->fetch_assoc()){
-    $datamerk[] = $tiap;
-}
-?>
+<h3 class="h3">PRODUK</h3>
+<div class="container-produk">
+    <div class="table-produk">
+        <table bgcolor="whitesmoke">
+                <tr>
+                    <th>Id</th>
+                    <th>Produk</th>
+                    <th>Merk</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                    <th>Menu</th>
+                </tr>
 
-<h3 class="h3">CATAT</h3>
-<div class="container-catat">
-	<form action="controller/keluar-proc.php" method="POST" class="form-catat">
-            <h2>Masukan Barang</h2>
-            <span>Nama Barang: *</span>
-            <br>
-            <input type="text" name="namaBarang" class="input-text"/>
-            <br>
-            <span>Stok: *</span>
-            <br>
-            <input type="text" name="jumlah" class="input-text"/>
-            <br>
-            <span>Nama Peminta: *</span>
-            <br>
-            <input type="text" name="namaPeminta" class="input-text"/>
-            <br>
-            <span>Nama Petugas: *</span>
-            <br>
-            <input type="text" name="namaPetugas" class="input-text"/>
-            <br>
-            <button class="submit-uni" style="background-color: var(--kuning);" value="keluar" name="keluar">Catat</button>
-        </form>
+                <?php 
+                    include 'controller/conn.php';
+
+                    $query = mysqli_query($conn, "SELECT * FROM merk JOIN barang ON merk.idMerk = barang.idMerk");
+                    $no=1;
+                    while($data = mysqli_fetch_array($query)){
+                ?>
+                <tr>
+                    <td><?= $data['idBarang']; ?></td>
+                    <td><?= $data['namaBarang']; ?></td>
+                    <td><?= $data['namaMerk']; ?></td>
+                    <td><?= $data['hargaBarang']; ?></td>
+                    <td><?= $data['stokBarang']; ?></td>
+                    <td><a href="index.php?halaman=edit&id=<?= $data['idBarang']; ?>"><button class="submit-e" style="background-color: var(--kuning);">Ubah</button></a><a href="index.php?halaman=hapus&id=<?= $data['idBarang']; ?>"><button class="submit-e" style="background-color: var(--merah);">Hapus</button></a></td>
+                </tr>
+                <?php
+                } 
+                ?>
+        </table>
+    </div>
 </div>

@@ -8,6 +8,7 @@
   letter-spacing: 1px;
   color: black;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 :root {

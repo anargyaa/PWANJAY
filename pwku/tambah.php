@@ -34,4 +34,4 @@ while($tiap = $query->fetch_assoc()){
             <br>
             <button class="submit-uni" style="background-color: var(--kuning);" value="submit" name="submit">Tambahkan</button>
         </form>
-</div>
+</div> 

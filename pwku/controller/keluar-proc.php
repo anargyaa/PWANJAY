@@ -17,11 +17,10 @@ if ($_POST["keluar"]) {
         ?>
         <script language="JavaScript">
             alert('Oops! Jumlah pengeluaran lebih besar dari stok ...');
-            document.location='./';
+            document.location='../index-karyawan.php';
         </script>
         <?php
     }
-    //proses    
     else{
         $insert =mysqli_query($conn, "INSERT INTO keluar VALUES ('', '$idBarang', '$namaPeminta', '$namaPetugas', '$jumlah')");
             if($insert){
