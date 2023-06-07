@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2023 at 06:07 AM
+-- Generation Time: Jun 07, 2023 at 07:34 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,21 +40,41 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`idBarang`, `idMerk`, `namaBarang`, `hargaBarang`, `stokBarang`) VALUES
-(11, 2, 'ASUS ROG PHONE 2', 200000001, 12),
-(12, 1, 'ASUS ROG PHONE 2', 20000000, 2),
-(13, 1, 'ASUS ROG PHONE 3', 9999993, 3),
-(14, 1, 'ASUS ROG PHONE 4', 9999994, 4),
-(15, 1, 'ASUS ROG PHONE 5', 9999995, 5),
+(11, 2, 'ASUS ROG PHONE 2', 1, 12),
+(13, 1, 'ASUS ROG PHONE 3', 9999993, 1),
+(14, 1, 'ASUS ROG PHONE 4', 9999994, 2),
+(15, 1, 'ASUS ROG PHONE 5', 9999995, 1),
 (16, 2, 'SAMSUNG GALAXY J', 9999991, 1),
 (17, 2, 'SAMSUNG GALAXY J2', 9999992, 2),
 (18, 2, 'SAMSUNG GALAXY J3', 9999993, 3),
 (19, 2, 'SAMSUNG GALAXY J4', 9999994, 4),
 (20, 2, 'SAMSUNG GALAXY J5', 9999995, 5),
-(22, 0, '', 0, 0),
-(23, 0, '', 0, 0),
-(24, 0, '', 0, 0),
-(25, 0, '', 0, 0),
-(26, 0, '', 0, 0);
+(30, 3, 'awdawdaw', 123123123, 122);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `keluar`
+--
+
+CREATE TABLE `keluar` (
+  `idKeluar` int(11) NOT NULL,
+  `idBarang` int(11) NOT NULL,
+  `idMerk` int(11) NOT NULL,
+  `peminta` varchar(255) NOT NULL,
+  `petugas` varchar(255) NOT NULL,
+  `stokKeluar` int(11) NOT NULL,
+  `dates` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `keluar`
+--
+
+INSERT INTO `keluar` (`idKeluar`, `idBarang`, `idMerk`, `peminta`, `petugas`, `stokKeluar`, `dates`) VALUES
+(11, 14, 1, 'Reffa', 'Kaila', 1, '2023-06-03 02:39:00'),
+(12, 29, 1, 'reffa', 'affer', 1, '2023-06-03 03:09:35'),
+(13, 29, 1, 'refffa', 'daaaa', 9, '2023-06-03 11:27:41');
 
 -- --------------------------------------------------------
 
@@ -73,7 +93,8 @@ CREATE TABLE `merk` (
 
 INSERT INTO `merk` (`idMerk`, `namaMerk`) VALUES
 (1, 'Asus'),
-(2, 'Samsung');
+(2, 'Samsung'),
+(3, 'adawd');
 
 -- --------------------------------------------------------
 
@@ -85,7 +106,7 @@ CREATE TABLE `user` (
   `id` int(5) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `jabatan` enum('MANAGER','KARYAWAN','','') NOT NULL
+  `jabatan` enum('MANAGER','KARYAWAN') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -107,6 +128,12 @@ ALTER TABLE `barang`
   ADD PRIMARY KEY (`idBarang`);
 
 --
+-- Indexes for table `keluar`
+--
+ALTER TABLE `keluar`
+  ADD PRIMARY KEY (`idKeluar`);
+
+--
 -- Indexes for table `merk`
 --
 ALTER TABLE `merk`
@@ -126,13 +153,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `idBarang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idBarang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `keluar`
+--
+ALTER TABLE `keluar`
+  MODIFY `idKeluar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `merk`
 --
 ALTER TABLE `merk`
-  MODIFY `idMerk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idMerk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
