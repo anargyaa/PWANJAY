@@ -12,10 +12,8 @@
 			<a class="montserrat" style="font-size: 24px; font-style: italic;" href="">BRAND</a>
 		</div>
 		<ul class="ul">
-			<li><a class="poppins" href="">HOME</li>
-			<li><a class="poppins" href="">ABOUT</li>
-			<li><a class="poppins" href="">CONTACT</li>
-			<li><a class="poppins" href="">LOGIN</li>
+			<li><a class="poppins" href="index.php">HOME</li>
+			<li><a class="poppins" href="admin/signin.php">LOGIN</li>
 		</ul>
 	</div>
 	<div class="container">

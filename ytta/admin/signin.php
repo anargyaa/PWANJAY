@@ -12,11 +12,11 @@
 			<div class="label">
 				<h1 class="montserrat">SIGN IN</h1>
 			</div>
-			<form class="box" action="post">
+			<form class="box" action="index.php" method="post">
 				<input type="email" name="email" placeholder="Email">
 				<input type="password" name="password" placeholder="Password">
 				<div class="button-col">
-					<button class="button1" name="go">SIGN UP</button>
+					<button class="button1" onclick="window.location.href='Payment.html';" name="go">SIGN UP</button>
 					<button class="button2" name="go">GO</button>
 				</div>
 			</form>
